@@ -5,4 +5,5 @@ Useful functions for practicum.
 `pip install pip@git+https://github.com/Jcuhfehl/PracticumFunc`
 
 or clone the repository and install with
+
 `pip install .`
