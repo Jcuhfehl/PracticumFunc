@@ -1,0 +1,14 @@
+[project]
+name = "PracticumFunc"
+description = "Handige functies voor practicum"
+version = "0.1.0"
+authors = [
+    { name = "Freya Winters", email = "freya@justgamingltd.nl" }
+]
+dependencies = [
+	"numpy"
+]
+
+[build-system]
+build-backend = "flit_core.buildapi"
+requires = ["flit_core >=3.2,<4"]

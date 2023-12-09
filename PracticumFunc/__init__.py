@@ -36,7 +36,7 @@ def exponent_scientific_notation(x: float) -> int:
     return int(math.floor(math.log10(abs(x))))
 
 
-def round_with_error(value: float, error: float) -> (float, float):
+def round_with_error(value: float, error: float) -> (float, float, int):
     """
     Returns a tuple containing the rounded value and rounded error of a
         floating point number with a given error term.
@@ -66,6 +66,6 @@ def format_value_with_error(value: float, error: float, unit: str = None) -> str
     value_exponent = exponent_scientific_notation(value)
     m_value, m_error = value/(10**value_exponent), error/(10**value_exponent)
     if unit is None:
-        return f"${m_value} \\pm {m_error} \\cdot 10^{value_exponent}$"
+        return f"$({m_value} \\pm {m_error}) \\cdot 10^{value_exponent}$"
     else:
-        return f"${m_value} \\pm {m_error} \\cdot 10^{value_exponent} {unit}$"
+        return f"$({m_value} \\pm {m_error}) \\cdot 10^{{{value_exponent}}} {unit}$"
